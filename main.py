@@ -52,7 +52,7 @@ while 1:
             # print('\x04')
             filename = input('Enter filename: ')
             with open(filename, 'w') as f:
-                f.write( sys.stdout.getvalue() )
+                f.write( sys.stdout.getvalue().encode().decode('unicode-escape') )
             break
     elif inp == '\x1b':
         ESC = 1
